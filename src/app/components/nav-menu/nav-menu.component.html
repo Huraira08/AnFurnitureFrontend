@@ -1,0 +1,15 @@
+<ul nz-menu nzMode="inline" style="width: 240px;">
+    <li
+      nz-submenu
+      [(nzOpen)]="openMap['sub1']"
+      (nzOpenChange)="openHandler('sub1')"
+      nzTitle="Pages"
+    >
+      <ul>
+        <li nz-menu-item>Product</li>
+        <li nz-menu-item>Services</li>
+        <li nz-menu-item>Article</li>
+        <li nz-menu-item>About us</li>
+      </ul>
+    </li>
+</ul>

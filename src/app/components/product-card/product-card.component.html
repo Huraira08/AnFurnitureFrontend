@@ -1,0 +1,19 @@
+<div class="product-card-container">
+  <nz-card nzHoverable [nzCover]="coverTemplate">
+    <div class="category-container">
+      <div class="category">
+        {{category}}
+      </div>
+    </div>
+    <nz-card-meta [nzTitle]="title" [nzDescription]="description | truncate : 64">
+    </nz-card-meta>
+    <div class="price-container">
+      <div class="price">
+        ${{price}}
+      </div>
+    </div>
+  </nz-card>
+  <ng-template #coverTemplate>
+    <img class="card-icon" alt="example" [src]="imgPath" height="354" width="320"/>
+  </ng-template>
+</div>

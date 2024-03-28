@@ -1,0 +1,42 @@
+.offer-container{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.offer-image{
+    width: 100%;
+    height: auto;
+}
+
+.offer-info{
+    width: 421px;
+    height: 195px;
+    box-sizing: content-box;
+    /* margin: 149px 132px; */
+    position: absolute;
+    top: 149px;
+    left: 132px;
+}
+
+.offer-info button{
+    width: 88px;
+    height: 41px;
+    border-radius: 16px;
+    background-color: var(--main-color);
+    border: none;
+}
+
+.offer-info h2{
+    font-size: 44;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+
+.offer-info h3{
+    font-size: 24;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 15px;
+    max-width: 280px;
+}

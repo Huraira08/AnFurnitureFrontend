@@ -1,0 +1,30 @@
+<div class="product-card-container">
+    <nz-card nzHoverable [nzCover]="coverTemplate">
+        <div class="comment-container">
+            <div class="comment">
+              {{comment}}
+            </div>
+          </div>
+
+      <div class="bottom">
+        <div class="customer">
+            <div class="avatar-container">
+                <img class="avatar-img" [src]="customerImgPath" height="50" width="50" alt="">
+            </div>
+            <div class="customer-name-container">
+                <div class="customer-name">
+                    {{customerName}}
+                </div>
+            </div>
+        </div>
+        <div class="rating-container">
+            <div class="rating">
+                <img src="../../../assets/images/star.png" alt=""><p>{{rating}}</p>
+            </div>
+        </div>
+      </div>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img class="card-icon" alt="example" [src]="iconImgPath" height="394" width="360"/>
+    </ng-template>
+  </div>

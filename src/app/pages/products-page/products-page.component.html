@@ -1,0 +1,43 @@
+<div class="page-container">
+    <app-page-heading
+    heading="Products"
+    subheading="We display products based on the latest products we have, if you want
+    to see our old products please enter the name of the item"
+    ></app-page-heading>
+    <nz-carousel nzAutoPlay *ngIf="offersData.length > 0">
+        <div class="carousel" nz-carousel-content *ngFor="let offer of offersData">
+            <app-product-offer
+            [buttonText]="offer.buttonText"
+            [offerTitle]="offer.offerTitle"
+            [offerDetail]="offer.offerDetail"
+            [imgPath]="offer.imgPath"
+            ></app-product-offer>
+        </div>
+    </nz-carousel>
+
+    <div class="all-products" #productsContainer>
+        <div class="products-heading">
+            <div class="heading-name">
+                <h2>Total Product</h2>
+                <nz-badge nzStandalone [nzCount]="productsOnPage.length" [nzStyle]="{ backgroundColor: '#52c41a' }"></nz-badge>
+            </div>
+            <nz-pagination 
+            [nzPageIndex]="this.currentPage" 
+            [nzTotal]="this.products.length"
+            [nzPageSize]="pageSize"
+            (nzPageIndexChange)="onPageIndexChange($event)"
+            ></nz-pagination>
+        </div>
+        <div nz-row nzJustify="space-between" *ngIf="productsOnPage.length > 0">
+            <div *ngFor="let product of productsOnPage" nz-col nzXl="7" class="product-row">
+                <app-product-card
+                [title]="product.title"
+                [description]="product.description"
+                [imgPath]="product.image"
+                [price]="product.price"
+                [category]="product.category"
+                ></app-product-card>
+            </div>
+        </div>
+    </div>
+</div>

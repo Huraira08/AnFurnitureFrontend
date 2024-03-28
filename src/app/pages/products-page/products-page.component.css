@@ -1,0 +1,23 @@
+.page-container{
+    margin-top: 100px;
+}
+
+.carousel{
+    /* margin-top: 1500px auto; */
+    height: 500px;
+}
+
+.all-products{
+    margin: 50px 100px;
+}
+
+.products-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.heading-name{
+    display: flex;
+}
+.product-row{
+    margin-bottom: 30px;
+}

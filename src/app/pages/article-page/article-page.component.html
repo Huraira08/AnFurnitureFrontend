@@ -1,0 +1,91 @@
+<div class="page-container">
+    <app-page-heading
+    heading="Article"
+    subheading="We display products based on the latest products we have, if you want
+    to see our old products please enter the name of the item"
+    ></app-page-heading>
+
+    <div class="article-carousel">
+        <nz-carousel nzDotPosition="top" nzAutoPlay *ngIf="articleCarouselData.length > 0">
+            <div nz-carousel-content *ngFor="let article of articleCarouselData">
+                <img class="carousel-img" [src]="article.imgPath" alt="">
+            </div>
+        </nz-carousel>
+        <div class="blog-article">
+            <p class="category">Tips and Trick</p>
+            <h3>This 400-Square-Foot New York Apartment Is Maximized With
+                Custom Millwork</h3>
+            <div class="bottom">
+                <div class="author">
+                    <img src="../../../assets/images/article-author.png" alt="">
+                    <h6 class="author-name">By Morgan Goldberg</h6>
+                </div>
+                <div class="date">Tuesday, 17 May 2022</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="headlines">
+        <h5 class="name">Daily news</h5>
+        <h2>Today top headlines</h2>
+        <div nz-row nzJustify="space-between" class="headline-card">
+            <div nz-col nzXl="11" class="left-card" style="margin-bottom: 25px;">
+                <img src="../../../assets/images/left-headline.png" alt="">
+                <div class="headline-content">
+                    <p class="paragraph">Design Inspiration</p>
+                    <h3>{{"Bedroom Design is the Most Personal Reflection of the Owner, Really?" | truncate : 47}}</h3>
+                    <p class="paragraph">{{"Is it true that the bedroom design is the most personal reflection of the owner? Many people believe that to be able to judge a person's personality, it is enough to" | truncate: 120}}</p>
+                    
+                    <div class="bottom">
+                        <div class="author">
+                            <img src="../../../assets/images/ellipse-person.png" alt="">
+                            <h6 class="author-name" style="margin-top: 10px;">By James Agnes</h6>
+                        </div>
+                        <div class="date">Tuesday, 17 May 2022</div>
+                    </div>
+                </div>
+            </div>
+            <div nz-col nzXl="11" class="right-card">
+                <img src="../../../assets/images/right-headline.png" alt="">
+                <div class="headline-content">
+                    <p class="paragraph">Tips and Trick</p>
+                    <h3>{{"Create a non-monotonous and dynamic interior atmosphere with these 9 variations of wall tiles" | truncate : 47}}</h3>
+                    <p class="paragraph">{{"Quoted from The Healthy Home Economist, a study in 1932 stated that color doesn't really have to be visible to have an effect The radiance of a"
+                    | truncate: 120}}</p>
+                    
+                    <div class="bottom">
+                        <div class="author">
+                            <img src="../../../assets/images/person2.jpg" alt="">
+                            <h6 class="author-name" style="margin-top: 10px;">By Julian Athorn</h6>
+                        </div>
+                        <div class="date">Wednesday, 22 January 2022</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="trending">
+        <h5 class="name">Trending Topics</h5>
+        <h2>Popular last week</h2>
+        <div class="trending-articles">
+            <div *ngFor="let article of trendingTopicsData" class="article-card" style="margin-bottom: 25px;">
+                <app-article-card
+                [category]="article.category"
+                [heading]="article.heading"
+                [description]="article.description"
+                [authorName]="article.authorName"
+                [avatarImgPath]="article.avatarImgPath"
+                [articleImgPath]="article.articleImgPath"
+                [date]="article.date"
+                [hasMaxWidth]=true
+                ></app-article-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h2>Subscribe our newsletter</h2>
+        <button nz-button nzType="primary">Let's Talk</button>
+    </div>
+</div>

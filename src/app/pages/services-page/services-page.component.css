@@ -1,0 +1,86 @@
+.page-container{
+    margin: 100px;
+}
+
+.services-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+hr{
+    border: 1px solid var(--line-color);
+}
+
+.service-card{
+    margin-top: 100px;
+}
+
+
+.portfolio{
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio .left-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 475px;
+}
+
+.portfolio .name{
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.portfolio .heading{
+    color: var(--text-color);
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.portfolio .right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 495px;
+}
+
+.portfolio .description{
+    color: var(--paragraph-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.portfolio .portfolio-link{
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.portfolio-projects{
+    margin-top: 50px;
+}
+
+.interest{
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interest h2{
+    max-width: 390px;
+}
+
+.interest button{
+    width: 201px;
+    height: 53px;
+    background-color: var(--main-color);
+    border: none;
+}

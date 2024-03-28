@@ -1,0 +1,109 @@
+nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+a:hover{
+    color: var(--main-color)!important;
+}
+
+.active-link{
+    position: relative;
+    color: var(--main-color)!important;
+    border-bottom: 3px solid var(--main-color);
+    /* max-width: 80px; */
+    border-spacing: 30px;
+}
+
+.logo{
+    display: flex;
+    cursor: pointer;
+}
+.logo-title{
+    font-weight: bold;
+}
+
+[nz-button] {
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+
+.nav-buttons{
+    width: 490px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a.nav-links{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+[nz-icon]{
+    font-size: 30px;
+    margin-right: 24px;
+}
+
+hr{
+    margin:auto 30px;
+    border:1px solid #E5E5E5;
+}
+
+footer{
+    margin-top: 80px;
+    height: 290px;
+
+}
+.footer-content{
+    padding: 100px;
+    padding-bottom: 0;
+}
+
+.left-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo-title{
+    font-size: 24px;
+}
+
+.footer-text{
+    font-size: 18px;
+    margin-top: 36px;
+    font-weight: 500;
+    max-width: 550px;
+}
+
+.right-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 481px;
+}
+
+.right-footer h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.right-footer p{
+    font-size: 18px;
+    font-weight:500;
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-buttons {
+      display: none;
+    }
+    nav{
+        /* flex-direction: column; */
+        align-items: flex-start;
+        padding: 10px;
+    }
+  }

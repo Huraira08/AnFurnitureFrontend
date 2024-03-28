@@ -1,0 +1,29 @@
+/* Reusable */
+.paragraph{
+    font-size: 18px;
+    font-weight: medium;
+    color: var(--paragraph-color);
+    margin-bottom: 10px;
+}
+/* end */
+
+.page-container{
+    margin: 100px;
+}
+
+.mission{
+    margin-top: 120px;
+}
+
+.left-content h2{
+    max-width: 650px;
+}
+
+.left-content .achievements{
+    margin-top: 80px;
+    display: flex;
+}
+
+.achievement{
+    margin-right: 58px;
+}

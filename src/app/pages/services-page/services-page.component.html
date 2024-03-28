@@ -1,0 +1,47 @@
+<div class="page-container">
+    <app-page-heading
+    heading="Services"
+    subheading="The product crafted by talented crafter and using high quality material with love inside"
+    ></app-page-heading>
+    <img class="services-img" src="../../../assets/images/services-img.png" alt="">
+
+    <hr>
+
+    <div class="service-cards" nz-row nzJustify="space-between">
+        <div nz-col nzXl="7" *ngFor="let service of servicesData; let i = index">
+            <app-service-card
+            nz
+            [index]="addLeadingZero(i)"
+            [title]="service.title"
+            [description]="service.description"
+            ></app-service-card>
+        </div>
+    </div>
+
+    <div class="portfolio">
+        <div class="left-content">
+            <div class="name">Portofolio</div>
+            <div class="heading">Amazing project we’ve
+                done before</div>
+        </div>
+        <div class="right-content">
+            <p class="description">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non.</p>
+            <a href="#" class="portfolio-link">View Portofolio</a>
+        </div>
+    </div>
+
+    <div nz-row nzJustify="space-between" class="portfolio-projects">
+        <div nz-col nzXl="9" class="porfolio-projects-left">
+            <img src="../../../assets/images/porfolio-left.png" alt="" style="margin-bottom: 30px;">
+        </div>
+        <div nz-col nzXl="13">
+            <img src="../../../assets/images/portfolio-right1.png" alt="" style="margin-bottom: 30px;">
+            <img src="../../../assets/images/portfolio-right2.png" alt="">
+        </div>
+    </div>
+
+    <div class="interest">
+        <h2>Are you interested work with us?</h2>
+        <button nz-button nzType="primary">Let's Talk</button>
+    </div>
+</div>

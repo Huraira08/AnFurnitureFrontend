@@ -1,0 +1,149 @@
+<div class="page-container">
+    <div class="description">
+        <h2 class="main-text">
+            Discover Furniture With
+        High Quality Wood
+        <img class="star-img" src="../../../assets/images/stars-plus-wink.png" alt="">
+        </h2>
+        <p class="sub-text">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non. Purus parturient viverra nunc, tortor sit laoreet. Quam tincidunt aliquam adipiscing tempor.</p>
+    </div>
+
+
+    <img src="../../../assets/images/landing-funiture-image.png" alt="landing-funiture-image" 
+    style="max-width: 100%; height: auto;">
+
+    <div class="benefits-container">
+        <div nz-row nzJustify="space-between" class="heading">
+            <div nz-col nzMd="24" nzLg="10" class="left-content">
+                <p>Benefits</p>
+                <h2>Benefits when using
+                    our services</h2>
+            </div>
+            <div nz-col nzLg="24" nzXl="10" class="right-content">
+                <p>Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non purus parturient.</p>
+            </div>
+        </div>
+        <div nz-row nzJustify="space-between" class="feature-cards">
+            <div nz-col nzLg="24" nzXl="7" *ngFor="let card of featureCardsData;">
+                <app-feature-card
+                [title]="card.title"
+                [description]="card.description"
+                [imgPath]="card.imgPath"
+                ></app-feature-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="popular-products">
+        <div class="popular-heading">
+            <p class="popular-text">Product</p>
+            <h2>Our Popular Product</h2>
+            <p class="popular-paragraph">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non purus parturient.</p>
+        </div>
+            <nz-carousel nzAutoPlay *ngIf="products.length > 0">
+                <div nz-carousel-content *ngFor="let product of products.slice(1,4)">
+                    <app-product-card
+                    [title]="product.title"
+                    [description]="product.description"
+                    [imgPath]="product.image"
+                    [price]="product.price"
+                    [category]="product.category"
+                    ></app-product-card>    
+                </div>
+            </nz-carousel>
+        </div>
+
+    <div nz-row nzJustify="space-between" class="highlights">
+        <div nz-col nzLg="24" nzXl="11" class="left-highlights">
+            <p class="highlights-text">
+                Our Product
+            </p>
+            <h2 class="highlights-heading">
+                Crafted by talented and
+                high quality material
+            </h2>
+            <p class="highlights-paragraph">
+                Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non purus parturient. morbi fermentum, vivamus et accumsan dui tincidunt pulvinar
+            </p>
+            <button class="learn-btn" nz-button nzType="primary">Learn More</button>
+            <div class="highlights-left-img">
+                <img src="../../../assets/images/highlights-left.png" alt="">
+            </div>
+        </div>
+        <div nz-col nzLg="24" nzXl="11" class="right-highlights">
+            <div class="achievements">
+                <app-achievement
+                numberText="20+"
+                title="Years Experience"
+                ></app-achievement>
+
+                <app-achievement
+                numberText="483"
+                title="Happy Client"
+                ></app-achievement>
+
+                <app-achievement
+                numberText="150+"
+                title="Project Finished"
+                ></app-achievement>
+            </div>
+
+            <div class="highlights-right-img">
+                <img src="../../../assets/images/highlights-right.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <p class="yellow-text testimonials-name">
+            Testimonials
+        </p>
+        <h2 class="heading2-text">
+            What our customer say
+        </h2>
+
+        <p class="testimonials-paragraph">
+            Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non purus parturient.
+        </p>
+
+        <nz-carousel nzAutoPlay *ngIf="products.length > 0">
+            <div nz-carousel-content *ngFor="let testimonial of testimonialsData">
+                <app-testimonial-card
+                [iconImgPath]="testimonial.iconImgPath"
+                [customerImgPath]="testimonial.customerImgPath"
+                [customerName]="testimonial.customerName"
+                [comment]="testimonial.comment"
+                [rating]="testimonial.rating"
+                ></app-testimonial-card>
+            </div>
+        </nz-carousel>
+    </div>
+
+    <div nz-row nzJustify="space-between" class="articles">
+        <div nz-col nzLg="24" nzXl="11" class="left-articles">
+            <p class="yellow-text">Articles</p>
+            <h2 class="heading2-text" style="max-width: 545px;margin-bottom: 0;">The best furniture comes from Lalasia</h2>
+            <p class="article-paragraph">Pellentesque etiam blandit in tincidunt at donec.</p>
+            <img src="../../../assets/images/article-left.png" alt="Article left image"
+            width="582" height="565">
+        </div>
+        <div nz-col nzLg="24" nzXl="11" class="right-articles">
+            <div *ngFor="let article of articlesData" class="article-card">
+                <app-article-card 
+                [category]="article.category"
+                [heading]="article.heading"
+                [description]="article.description"
+                [authorName]="article.authorName"
+                [avatarImgPath]="article.avatarImgPath"
+                [articleImgPath]="article.articleImgPath"
+                [date]="getCurrentDate()"
+                ></app-article-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="discount">
+        <h2 class="heading2-text" style="max-width: 800px;">Join with me to get special discount</h2>
+        <button class="learn-btn" style="color: white;margin-top: 0;">Learn more</button>
+    </div>
+</div>

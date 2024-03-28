@@ -1,0 +1,36 @@
+.product-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    max-width: 354;
+}
+nz-card{
+    max-width: 354px;
+}
+
+nz-card-meta{
+    text-align: left;
+}
+
+.price-container{
+    display: flex;
+    justify-content: start;
+}
+
+.price{
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.category-container{
+    display: flex;
+    justify-content: start;
+    margin-top: 26px;
+    margin-bottom: 14px;
+}
+.category{
+    color: var(--paragraph-color);
+}
