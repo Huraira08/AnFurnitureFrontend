@@ -1,0 +1,13 @@
+.card-container{
+    display: flex;
+}
+
+.card-container img{
+    margin-right: 25px;
+}
+
+.paragraph{
+    font-size: 18px;
+    font-weight: medium;
+    color: var(--paragraph-color);
+}

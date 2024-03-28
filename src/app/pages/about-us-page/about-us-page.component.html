@@ -33,6 +33,49 @@
                 ></app-achievement>
             </div>
         </div>
-        <div nz-col nzXl="11" class="right-content"></div>
+        <div nz-col nzXl="11" class="right-content">
+            <app-customer-service-card
+            imgPath="../../assets/images/call-icon.png"
+            class="customer-service-card"
+            title="24/7 Supports"
+            description="24/7 support means a support service that is provided 24 hours a day and 7 days a week."
+            ></app-customer-service-card>
+
+            <app-customer-service-card
+            imgPath="../../assets/images/message-icon.png"
+            class="customer-service-card"
+            title="Free Consultation"
+            description="The comprehensive guarantee is required for import, warehousing, transit, processing and specific use. "
+            ></app-customer-service-card>
+
+            <app-customer-service-card
+            imgPath="../../assets/images/guarantee-icon.png"
+            class="customer-service-card"
+            title="Overall Guarantee"
+            description="24/7 support means a support service that is provided 24 hours a day and 7 days a week."
+            ></app-customer-service-card>
+        </div>
+    </div>
+
+    <div class="team">
+        <div nz-row nzJustify="space-between" class="team-heading">
+            <div nz-col nzXl="11" class="left-team-heading">
+                <h5>Our Team</h5>
+                <h2>Meet our leading and strong team</h2>
+            </div>
+            <div nz-col nzXl="11" class="right-team-heading">
+                <p class="paragraph">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non purus parturient.</p>
+            </div>
+        </div>
+        <div nz-row nzJustify="space-between" class="team-members">
+            <div *ngFor="let teamMember of teamMembersData" class="team-member-card">
+                <app-team-member-card
+                nz-col nzXl="7"
+                [name]="teamMember.name"
+                [jobTitle]="teamMember.jobTitle"
+                [imgPath]="teamMember.imgPath"
+                ></app-team-member-card>
+            </div>
+        </div>
     </div>
 </div>

@@ -27,3 +27,24 @@
 .achievement{
     margin-right: 58px;
 }
+
+.customer-service-card{
+    margin-bottom: 30px;
+}
+
+.team{
+    margin-top: 120px;
+}
+
+.team-heading{
+    display: flex;
+    align-items: last baseline;
+}
+
+.team-members{
+    margin-top: 50px;
+}
+
+.team-member-card{
+    margin-bottom: 25px;
+}

@@ -36,6 +36,8 @@ import { PageHeadingComponent } from './components/page-heading/page-heading.com
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ArticlePageComponent } from './pages/article-page/article-page.component';
 import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.component';
+import { CustomerServiceCardComponent } from './components/customer-service-card/customer-service-card.component';
+import { TeamMemberCardComponent } from './components/team-member-card/team-member-card.component';
 
 registerLocaleData(en);
 
@@ -57,6 +59,8 @@ registerLocaleData(en);
     ServiceCardComponent,
     ArticlePageComponent,
     AboutUsPageComponent,
+    CustomerServiceCardComponent,
+    TeamMemberCardComponent,
   ],  
   imports: [
     BrowserModule,

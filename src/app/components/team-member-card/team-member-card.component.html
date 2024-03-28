@@ -1,0 +1,9 @@
+<div class="team-member-card-container">
+    <nz-card nzHoverable [nzCover]="coverTemplate">
+      <nz-card-meta [nzTitle]="name" [nzDescription]="jobTitle">
+      </nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img class="card-icon" alt="example" [src]="imgPath" height="auto" width="100%"/>
+    </ng-template>
+  </div>
